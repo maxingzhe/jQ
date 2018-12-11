@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><link rel="stylesheet" href="./css/dist.min.css"><link rel="shortcut icon" href="https://www.daoway.cn/pcimages/favicon.png"><link rel="stylesheet" href="./css/reset.css"><link rel="stylesheet" href="//at.alicdn.com/t/font_923611_y05h67365ed.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css"><title>到位APP - 高品质上门服务直约平台，家政服务，上门按摩，上门维修，搬家，安心到家！</title><script type="text/javascript" src="./js/jq.js"></script><script type="text/javascript" src="./js/template.js"></script><script type="text/javascript" src="./js/dist.min.js"></script></head><body><div id="warp"><header id="header"><div class="head_top"><div class="head_content clearFix"><a href="javascript:;" class="left"><img src="./images/citypoint.png" alt=""> <span class="city">北京</span> <span class="tap">[切换城市]</span></a><div class="right clearFix"><a href="javascript:;">首页</a> <a href="javascript:;">关于我们</a> <a href="./facilitator.html">服务商</a> <a href="javascript:;">商家入驻</a> <a href="javascript:;">商家登录</a> <a href="javascript:;">到位App</a></div></div></div><div class="content"><div class="content_main"><img src="./images/logo.png" alt=""><div class="search"><span class="iconfont icon-sousuo font"></span> <input type="text" placeholder="输入关键词搜索商家、服务"><div class="btn">搜服务</div></div><div class="sanjiao"></div><img src="./images/2.png" alt="" class="qrcode"></div></div></header><div class="banner_warp"><div class="banner_content"><ul class="list"></ul></div><div class="swiper-container"><div class="swiper-wrapper"><div class="swiper-slide one"></div><div class="swiper-slide two"></div><div class="swiper-slide three"></div></div><div class="swiper-pagination"></div></div></div><div class="box_warp"></div><div class="footer_title"><h2><span>到位</span> <span style="color: red">服务</span> <span>保证</span></h2><p>到位平台担保交易安全，交易未成功100%退款</p><ul class="footer_list"><li><img src="./images/anquan.jpg" alt=""> <span>优选服务</span></li><li><img src="./images/anquan.jpg" alt=""> <span>全程保障</span></li><li><img src="./images/anquan.jpg" alt=""> <span>安全无忧</span></li></ul></div><div class="footer_city"><dl><dt>热门城市</dt><dd class="city_item"></dd></dl></div><div class="footer_pic"><div class="footer_pic_content"><p>合作伙伴</p><ul><li><img src="./images/partner01.jpg" alt=""></li><li><img src="./images/partner02.jpg" alt=""></li><li><img src="./images/partner03.png" alt=""></li><li><img src="./images/partner04.jpg" alt=""></li><li><img src="./images/partner05.jpg" alt=""></li><li><img src="./images/partner06.png" alt=""></li><li><img src="./images/partner07.jpg" alt=""></li><li><img src="./images/partner08.jpg" alt=""></li><li><img src="./images/partner09.jpg" alt=""></li></ul><ul><li><img src="./images/partner10.jpg" alt=""></li><li><img src="./images/partner11.jpg" alt=""></li><li><img src="./images/partner12.jpg" alt=""></li><li><img src="./images/partner13.jpg" alt=""></li><li><img src="./images/partner14.jpg" alt=""></li><li><img src="./images/partner15.jpg" alt=""></li><li><img src="./images/partner16.jpg" alt=""></li><li><img src="./images/partner17.jpg" alt=""></li><li><img src="./images/partner18.jpg" alt=""></li></ul></div></div><div class="copyright_warp"><div class="copyright_content"><span class="copyright">©2015 版权所有 到位 daoway.com 京ICP备15001471号-1 北京邻家科技有限公司</span></div></div></div><script type="text/html" id="class1">{{each data as value i}}
+  <li class="list_item">
+    <a href="javascript:;" class="every">
+      <span>{{value.serviceIndex}}</span>
+      <i class="iconfont icon-jiantou-copy"></i>
+    </a>
+    <ul class="inner">
+      {{each value.serviceType as items i}}
+      <li class="inner_item">
+        <a href="javascript:;">{{items}}</a>
+      </li>
+      {{/each}}
+    </ul>
+  </li>
+{{/each}}</script><script type="text/html" id="class2">{{each data as value i}}
+<div class="box">
+  <div class="box_content">
+    <div class="box_inner">
+      <span class="title">{{value.serviceIndex}}</span>
+      <span class="title_content">
+      {{each value.serviceType as item i}}
+      <a href="javascript:;">{{item}}</a>
+
+      {{/each}}
+      <a href="javascript:;" class="last">更多服务></a>
+      </span>
+    </div>
+    <div class="item_warp">
+    {{each value.shopList as shop i}}
+      <a href="javascript:;">
+      <div class="item_content">
+        <img src={{shop.imgUrl}} alt="">
+        <span class="top ellipsis">{{shop.serviceName}}</span>
+        <div class="center">
+          {{shop.description}}
+        </div>
+        <div class="buttom">
+          <span style="font-size: 20px">{{shop.price}}</span>
+          <span>元/小时</span>
+          <span class="detail">查看详情</span>
+        </div>
+      </div>
+    </a>
+    {{/each}}
+    </div>
+      <div class="item_buttom">
+      {{each value.elseList as list i}}
+          <a href="javascript:;">{{list}}</a>
+      {{/each}}
+      </div>
+  </div>
+</div>
+{{/each}}</script><script type="text/html" id="class3">{{each data as vaule i}}
+    <a href="javascript:;">{{vaule}}</a>
+  {{/each}}</script><script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.js"></script></body></html>
